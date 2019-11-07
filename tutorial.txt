@@ -1,5 +1,5 @@
-Create the directory for your projects. Below is a suggestion for directory structure starting in your user folder. Creatre a projects folder inside your user folder. Then create a CSXWebsite folder inside the projects folder.
-Example: (user)/projects/CSXWebsite/
+Create the directory for your projects. Below is a suggestion for directory structure starting in your user folder. Creatre a projects folder inside your user folder:
+Example: (user)/projects/
 
 Download Python 3.8 (Make sure to select create PATH variable)
 
@@ -8,9 +8,6 @@ Download Python 3.8 (Make sure to select create PATH variable)
 Download and install GIT BASH terminal from 
 https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.2/Git-2.24.0.2-64-bit.exe
 
-Navigate to the projects directory using:
-cd projects/CSXWebsite
-
 configure your git settings:
 git config user.name "YOUR NAME"
 git config user.email "YOUR EMAIL"
@@ -18,14 +15,19 @@ git config user.email "YOUR EMAIL"
 update pip (a commandline based installation tool):
 py -m pip install --upgrade pip
 
-
-Next we will install virtualenv. This allows you to create a virtual environment for the project and seperate any installed packages for this project from other projects on your computer:
-pip install virtualenv
+Navigate to the projects directory using:
+cd projects/
 
 Clone the current version of the website to your computer:
 git clone https://github.com/BHCC-CSX/CSXWebsite.git
 
-Create and activate a virtual environment:
+Navigate into the newly created project folder:
+cd CSXWebsite/
+
+Next we will install virtualenv. This allows you to create a virtual environment for the project and seperate any installed packages for this project from other projects on your computer:
+pip install virtualenv
+
+Create and activate a virtual environment (must use name "env" for .gitignore to function correctly):
 py -m venv env
 *** windows users *** source env/scripts/activate 
 *** mac users: *** source env/bin/activate
