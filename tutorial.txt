@@ -9,8 +9,8 @@ Download and install GIT BASH terminal from
 https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.2/Git-2.24.0.2-64-bit.exe
 
 configure your git settings:
-git config user.name "YOUR NAME"
-git config user.email "YOUR EMAIL"
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL"
 
 update pip (a commandline based installation tool):
 py -m pip install --upgrade pip
