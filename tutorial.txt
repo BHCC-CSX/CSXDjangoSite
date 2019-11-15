@@ -1,3 +1,5 @@
+There are several parts where different steps must be taken depending on your OS.
+
 Create the directory for your projects. Below is a suggestion for directory structure starting in your user folder. Creatre a projects folder inside your user folder:
 Example: (user)/projects/
 
