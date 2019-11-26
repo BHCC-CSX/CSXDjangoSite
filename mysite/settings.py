@@ -94,8 +94,8 @@ if os.getenv('GAE_APPLICATION', None):
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '/cloudsql/bhcc-csx:us-east1:csxdb-instance',
             'NAME': 'csxdb',
-            'USER': 'admin',
-            'PASSWORD': 'bhccadmin'
+            'USER': os.environ['CSXDB_USER'],
+            'PASSWORD': os.environ['CSXDB_PASSWORD']
         }
     }
 else:
