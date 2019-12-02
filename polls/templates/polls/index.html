@@ -1,4 +1,9 @@
-{% if latest_question_list %}
+{% extends "base.html" %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+	<h1>Polls</h1>
+	<hr>
+	{% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
@@ -7,3 +12,5 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+</div>
+{% endblock %}

@@ -1,4 +1,7 @@
-<h1>{{ question.question_text }}</h1>
+{% extends "base.html" %}
+{% block page_content %}
+<div class="col-md-10 offset-md-2">
+	<h1>{{ question.question_text }}</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -10,3 +13,5 @@
 {% endfor %}
 <input type="submit" value="Vote">
 </form>
+</div>
+{% endblock %}
