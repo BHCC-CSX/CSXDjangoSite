@@ -1,45 +1,39 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'blog_index' %}">BHCC Computer Science Exchange</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container"> 
+    <a class="navbar-brand" href="{% url 'home_index' %}">BHCC Computer Science Exchange</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'blog_index' %}">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="https://discord.gg/76xbjPA">Discord</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="https://bhcc.digication.com/computer_science_club/">Digication</a>
-            </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://discord.gg/76xbjPA">Discord</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://bhcc.digication.com/computer_science_club/">Digication</a>
+          </li>
 
-          </ul>
-        </div>
+        </ul>
     </div>
-
+  </div>
 </nav>
 
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-    <h2>sidebar</h2>
-
-    </div>
-
-
     {% block page_content %}{% endblock %}
-  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
