@@ -36,27 +36,25 @@ def vote(request, question_id):
             'error_message': "You didn't select a choice.",
         })
 
-    try: 
-        has_voted = request.COOKIES[str(question_id) + '_voted_flag']
-    except (KeyError):
-        return render(request, 'polls/results.html', {
-            'question': question,
-            'error_message': "You already voted.",
-        })
-
-
     else:
+        has_voted = request.COOKIES.get(str(question_id) + '_voted_flag')
+        if has_voted is None:
+            selected_choice.votes += 1
+            selected_choice.save()
+            # Always return an HttpResponseRedirect after successfully dealing
+            # with POST data. This prevents data from being posted twice if a
+            # user hits the Back button.
 
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
+            response = HttpResponseRedirect(
+                reverse('polls:results', args=(question.id,))
+                )
 
-        response = HttpResponseRedirect(
-            reverse('polls:results', args=(question.id,))
-        )
+            response.set_cookie(str(question_id) + '_voted_flag', True)
 
-        response.set_cookie(str(question_id) + '_voted_flag', True)
+            return response
 
-        return response
+        else:
+            return render(request, 'polls/results.html', {
+                'question': question,
+                'error_message': "You already voted.",
+            })
