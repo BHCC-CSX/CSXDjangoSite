@@ -1,0 +1,31 @@
+{
+  "name": "csx_website",
+  "version": "1.0.0",
+  "description": "Source code for the BHCC Computer Science Exchange website. This project was developed using Django, MySQL and Bootstrap 4. It is currently deployed on a Google App Engine Standard Python 3.7 environment and the database is also hosted with Google Cloud SQL.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
+    "build": "webpack --mode development ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BHCC-CSX/CSXDjangoSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BHCC-CSX/CSXDjangoSite/issues"
+  },
+  "homepage": "https://github.com/BHCC-CSX/CSXDjangoSite#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  }
+}

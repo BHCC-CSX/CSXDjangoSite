@@ -1,2 +1,2 @@
-env/
-credentials.yaml
+mysite/credentials.yaml
+node_modules
