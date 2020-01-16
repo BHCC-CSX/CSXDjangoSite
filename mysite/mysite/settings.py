@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'projects',
     'blog',
     'home',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -114,8 +115,8 @@ else:
             'HOST': '127.0.0.1',
             'PORT': '3306',
             'NAME': 'csxdb',
-            'USER': 'admin',
-            'PASSWORD': 'bhccadmin'
+            'USER': os.environ['CSXDB_USER'],
+            'PASSWORD': os.environ['CSXDB_PASSWORD']
         }
     }
 # [END db_setup]

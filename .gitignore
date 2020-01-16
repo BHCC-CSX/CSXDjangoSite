@@ -1,4 +1,4 @@
-env/
-credentials.yaml
 .DS_Store
 cloud_sql_proxy
+mysite/credentials.yaml
+node_modules
