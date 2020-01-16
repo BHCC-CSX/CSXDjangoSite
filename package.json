@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
-    "build": "webpack --mode development ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,12 +20,15 @@
   },
   "homepage": "https://github.com/BHCC-CSX/CSXDjangoSite#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "webpack": "^4.41.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
 }
