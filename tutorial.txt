@@ -37,5 +37,21 @@ py -m venv env
 Install the required packages (including Django!):
 pip install -r requirements.txt
 
+Install google cloud sdk:
+https://cloud.google.com/sdk/docs/downloads-versioned-archives
+
+This allows your computer to access the database the same way that the app would from the server that it is hosted on. This is for testing only. The proxy must be ran from the gcloud shell and kept running for the entire time you are testing the app
+
+Set cloud credentials:
+gcloud auth login
+
+
+Start sql proxy:
+
+cloud_sql_proxy -instances=bhcc-csx:us-east1:csxdb-instance=tcp:3306
+
+Or for Mac:
+./cloud_sql_proxy -instances=bhcc-csx:us-east1:csxdb-instance=tcp:3306
+
 You should now be able to deploy the website locally by running the following command:
 py manage.py runserver
