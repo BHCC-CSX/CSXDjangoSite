@@ -1,11 +1,19 @@
-from django.urls import path, include
+from rest_framework import routers
+from .api import ProjectViewSet
+
+from django.urls import path
 from . import views
 
 # urlpatterns = [
-# 	path("", views.project_index, name="project_index"),
-# 	path("<int:pk>/", views.project_detail, name="project_detail"),
+    # path('index/', views.project_index, name="project_index"),
+    # path('<int:pk>/', views.project_detail, name="project_detail"),
 # ]
 
+router = routers.DefaultRouter()
+router.register('api/projects', ProjectViewSet, 'projects')
+
 urlpatterns = [
-	path('api/project/', views.ProjectListCreate.as_view()),
-	]
+    router.urls,
+    path('index/', views.project_index, name="project_index"),
+    path('<int:pk>/', views.project_detail, name="project_detail"),
+]

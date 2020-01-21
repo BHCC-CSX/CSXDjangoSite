@@ -7,4 +7,4 @@ class Project(models.Model):
 	technology = models.CharField(max_length=20)
 	coordinator = models.CharField(max_length=70)
 	link = models.CharField(max_length=100)
-	image = models.FilePathField(path="/img")
+	image = models.FilePathField(path="./static/img/")
