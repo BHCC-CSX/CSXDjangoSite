@@ -1,0 +1,1 @@
+./cloud_sql_proxy -instances=bhcc-csx:us-east1:csxdb-instance=tcp:3306

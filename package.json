@@ -4,8 +4,8 @@
   "description": "Source code for the BHCC Computer Science Exchange website. This project was developed using Django, MySQL and Bootstrap 4. It is currently deployed on a Google App Engine Standard Python 3.7 environment and the database is also hosted with Google Cloud SQL.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./mysite/frontend/src/index.js --output ./mysite/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development  --watch ./mysite/projects_frontend/src/index.js --output ./mysite/projects_frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./mysite/projects_frontend/src/index.js --output ./mysite/projects_frontend/static/frontend/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "weak-key": "^1.0.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
