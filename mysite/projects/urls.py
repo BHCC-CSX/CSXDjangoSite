@@ -13,7 +13,8 @@ router = routers.DefaultRouter()
 router.register('api/projects', ProjectViewSet, 'projects')
 
 urlpatterns = [
-    router.urls,
     path('index/', views.project_index, name="project_index"),
     path('<int:pk>/', views.project_detail, name="project_detail"),
 ]
+
+urlpatterns.extend(router.urls)
