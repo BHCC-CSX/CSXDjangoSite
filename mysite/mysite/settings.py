@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'blog',
     'home',
     'rest_framework',
-    'projects_frontend'
+    'frontend'
 ]
 
 MIDDLEWARE = [
@@ -161,3 +161,7 @@ USE_TZ = True
 
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    "./mysite/static/"
+]

@@ -1,0 +1,19 @@
+.discord-icon {
+    background: url('icons/discord-brands.svg');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 40px;
+    width: 40px;
+    display: block;
+    color: #ffffff;
+}
+.github-icon {
+    background: url('icons/github-square-brands.svg');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 40px;
+    width: 40px;
+    display: block;
+}
