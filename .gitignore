@@ -1,6 +1,6 @@
 .DS_Store
 cloud_sql_proxy
-mysite/credentials.yaml
+credentials.yaml
 node_modules
 .vscode
 
