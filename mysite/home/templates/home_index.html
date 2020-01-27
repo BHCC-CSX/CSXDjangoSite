@@ -1,17 +1,35 @@
 {% extends "base.html" %}
+{% load static %}
 {% block page_content %}
 
-<div class="jumbotron">
-	<h1 class="display-3">We are BHCC CSX</h1>
-	<p class="lead">The Bunker Hill Community College Computer Science Exchange is an organization focused on providing
-		students with opportunities to gain practical experience. Members are encouraged to participate in our project
-		teams or even start their own. Some of our events include coding competitions, guest
-		talks, study breaks and workshops.</p>
-	<hr class="my-4">
-	<p>Interested in joining?</p>
-	<p class="lead">
-		<a class="btn btn-primary btn-lg" href="{% url 'project_index' %}" role="button">Email Us</a>
-	</p>
+<div class="jumbotron jumbotron-fluid">
+	<div class="container-fluid">
+		<div id="background"></div>
+		<h1 class="display-3">We are BHCC CSX</h1>
+		<p class="lead">The Bunker Hill Community College Computer Science Exchange is an organization focused on
+			providing
+			students with opportunities to gain practical experience with the field. Members are encouraged to
+			participate
+			in our project
+			teams or even start their own. Some of our events include coding competitions, guest
+			talks, study breaks and workshops.</p>
+		<hr class="my-4">
+
+		<form action="https://appspot.us4.list-manage.com/subscribe/post?u=18436d21c9c56d0fd4b060eba&amp;id=cbc9faf7fb"
+			method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+			target="_blank" novalidate>
+			<div id="form-group">
+				<label for="mce-EMAIL">Join our mailing list.</label>
+				<input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter email"
+					required>
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+						name="b_18436d21c9c56d0fd4b060eba_cbc9faf7fb" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+						class="btn btn-primary" style="margin-top:10px"></div>
+			</div>
+		</form>
+	</div>
 </div>
 <div class="col-md-8 offset-md-2">
 	<div class="card mb-3"></div>

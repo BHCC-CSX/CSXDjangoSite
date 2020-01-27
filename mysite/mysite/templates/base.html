@@ -1,6 +1,7 @@
 {% load static %}
 
 <head>
+
   <script src="https://kit.fontawesome.com/786260d7a7.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -12,43 +13,54 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
   </script>
+
+
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
-<nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'home_index' %}">BHCC Computer Science Exchange</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
-      {% with request.resolver_match.url_name as url_name %}
-      <ul class="nav navbar-nav mr-auto">
-        <li class="nav-item {% if 'home' in url_name %}active {% endif %}">
-          <a class="nav-link" href="{% url 'home_index' %}">Home</a>
-        </li>
-        <li class="nav-item {% if 'project' in url_name %}active {% endif %}">
-          <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
-        </li>
-        <li class="nav-item {% if 'blog' in url_name %}active {% endif %}">
-          <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
-        </li>
-      </ul>
-      {% endwith %}
+<body class="d-flex flex-column">
 
-      <ul class="nav navbar-nav navbar-right">
-        <a href="https://discord.gg/76xbjPA"><i class="fab fa-discord nav-icon"></i></a>
-        <a href="https://github.com/BHCC-CSX"><i class="fab fa-github-square nav-icon"></i></a>
-      </ul>
+  <nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'home_index' %}">BHCC Computer Science Exchange</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
+        {% with request.resolver_match.url_name as url_name %}
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item {% if 'home' in url_name %}active {% endif %}">
+            <a class="nav-link" href="{% url 'home_index' %}">Home</a>
+          </li>
+          <li class="nav-item {% if 'project' in url_name %}active {% endif %}">
+            <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
+          </li>
+          <li class="nav-item {% if 'blog' in url_name %}active {% endif %}">
+            <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
+          </li>
+        </ul>
+        {% endwith %}
+
+        <ul class="nav navbar-nav navbar-right">
+          <a href="https://discord.gg/76xbjPA"><i class="fab fa-discord nav-icon"></i></a>
+          <a href="https://github.com/BHCC-CSX"><i class="fab fa-github-square nav-icon"></i></a>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div id="page-content" class="container" style="padding-top: 100px">
+    {% block page_content %}{% endblock %}
   </div>
-</nav>
 
+  <footer id="sticky-footer" class="py-4">
+    <div class="container">
+      <p style="text-align: center">&copy; BHCC Computer Science Exchange 2020</p>
+    </div>
+  </footer>
 
-<div class="container" style="padding-top: 100px">
-  {% block page_content %}{% endblock %}
-</div>
+</body>
