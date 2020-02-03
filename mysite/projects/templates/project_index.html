@@ -3,20 +3,39 @@
 {% block page_content %}
 <h1>Projects</h1>
 <div class="row">
-{% for project in projects %}
-	<div class="col-md-4">
-		<div class="card mb-2">
-			<img class="card-img-top" src="{% static project.image %}">
+	{% for project in projects %}
+	{% if project.is_approved %}
+	<div class="col-md-4 d-flex align-items-stretch">
+		<div class="card mb-2 fixed-width-card">
+			<img class="card-img-top fixed-height-img" src="{{ project.image.url }}">
 			<div class="card-body">
 				<h5 class="card-title">{{ project.title }}</h5>
 				<p class="card-text">{{ project.description }}</p>
-				<a href="{% url 'project_detail' project.pk %}"
-					class="btn btn-primary">
-					  Read More
+				<div style="height: 30px"></div>
+				<a href="{% url 'project_detail' project.pk %}" class="btn btn-primary anchored-btn">
+					Read More
 				</a>
 			</div>
 		</div>
 	</div>
+	{% endif %}
 	{% endfor %}
+
+	<div class="col-md-4 d-flex align-items-stretch">
+		<div class="card mb-2 fixed-width-card">
+			<div class="card-img-top fixed-height-img bg-light">
+				<i class="fa fa-plus" id="add-icon"></i></div>
+
+			<div class="card-body">
+				<h5 class="card-title">Start your own!</h5>
+				<p class="card-text">Get started by filling out the
+					project proposal form.</p>
+				<div style="height: 30px"></div>
+				<a href="{% url 'project_proposal'%}" class="btn btn-primary anchored-btn">
+					Apply
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}

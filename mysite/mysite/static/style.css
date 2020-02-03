@@ -3,6 +3,22 @@
     padding-left: 10px;
 }
 
+.fixed-width-card {
+    width: 300px;
+}
+
+.fixed-height-img {
+    height: 200px;
+    width: 100%;
+    display: block;
+}
+
+.anchored-btn {
+    position: absolute;
+    left: 20;
+    bottom: 20;
+}
+
 html,
 body {
     height: 100%;
@@ -21,4 +37,12 @@ body {
     height: 500px;
     background: url('img/clubphoto.jpg') no-repeat center center;
     background-size: cover;
+}
+
+#add-icon {
+    font-size: 150;
+    color: gray;
+    text-align: center;
+    padding-top: 30px;
+    width: 100%;
 }

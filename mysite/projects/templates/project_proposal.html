@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-3">Project Proposal Form</h1>
+    </div>
+    <div class="container-fluid">
+        <form enctype="multipart/form-data" action="" method="post">
+            <fieldset>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>{{ form.title.label }}</label>
+                    {{ form.title }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.description.label }}</label>
+                    {{ form.description }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.technology.label }}</label>
+                    {{ form.technology }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.coordinator.label }}</label>
+                    {{ form.coordinator }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.coordinator_email.label }}</label>
+                    {{ form.coordinator_email}}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.link.label }}</label>
+                    {{ form.link }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.image.label }}</label>
+                    {{ form.image }}
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock %}

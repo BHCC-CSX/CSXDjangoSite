@@ -3,6 +3,8 @@ cloud_sql_proxy
 credentials.yaml
 node_modules
 .vscode
+futureplans.txt
+CSXWebsite-362054064845.json
 
 # Created by https://www.gitignore.io/api/django,appengine
 # Edit at https://www.gitignore.io/?templates=django,appengine
