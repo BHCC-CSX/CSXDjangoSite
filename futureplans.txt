@@ -1,3 +1,4 @@
 Add authors to blog app and create login and auth app for blog posting
 create javascript animation on homepage
 smartmockups.com
+
