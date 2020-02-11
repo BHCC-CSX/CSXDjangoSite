@@ -2,7 +2,7 @@
 
 Source code for the BHCC Computer Science Exchange website. This project was developed using Django, MySQL and Bootstrap 4. It is currently deployed on a Google App Engine Standard Python 3.7 environment and the database is also hosted with Google Cloud SQL.
 
-Currently deployed version can be found [here](http://www.bhcc-csx.appspot.com/)
+Currently deployed version can be found [here](http://www.bhcsx.tech/)
 
 ## Getting Started
 
