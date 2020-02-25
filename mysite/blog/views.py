@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from blog.models import Post
-from blog.models import Comment
+from .models import Post, Comment
 from .forms import CommentForm
 from django.http import HttpResponseBadRequest
 
